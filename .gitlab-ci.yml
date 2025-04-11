@@ -1,0 +1,39 @@
+variables:
+    DEV_DIR: "/home/pre-order/minigame"
+
+stages:
+    - build
+    - deploy
+
+minigame-web-build-fe-46:
+  tags:
+    - runner-46-fe
+  stage: build
+  only:
+      refs:
+        - minigame
+      variables:
+        - $CI_COMMIT_DESCRIPTION =~ /(minigame|all).*/  
+        - $CI_COMMIT_MESSAGE =~ /(minigame|all).*/
+  script:
+    - echo "Running build minigame web"
+    - cp "$DEV_DIR/env/.env.minigame.fe" .env
+    - docker build -t minigame_web_dev_img .
+    - echo "Deploy minigame web success!!!"
+
+minigame-web-deploy-fe-46:
+  tags:
+    - runner-46-fe
+  stage: deploy
+  only:
+      refs:
+        - minigame
+      variables:
+        - $CI_COMMIT_DESCRIPTION =~ /(minigame|all).*/
+        - $CI_COMMIT_MESSAGE =~ /(minigame|all).*/
+  script:
+    - echo "Runing deploy minigame web"
+    - docker compose -f docker-compose-runner-46.yml down 
+    - docker compose -f docker-compose-runner-46.yml -p minigame-web up -d 
+    - echo "Deploy minigame web success!!!"
+

@@ -1,0 +1,16 @@
+yarn.lock
+node_modules
+.env
+.DS_Store
+.idea
+.editorconfig
+storage
+
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+package-lock.json
+pnpm-lock.yaml
+# .gitlab-ci.yml
+*.sql
+.vscode/*

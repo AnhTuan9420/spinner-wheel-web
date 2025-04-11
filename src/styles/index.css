@@ -1,0 +1,119 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+.sd_info_common {
+  margin-bottom: 5px;
+}
+.sd_info_common li {
+  margin-top: 5px;
+}
+
+.price-black {
+  color: black !important;
+  font-weight: bold;
+}
+
+.sd_text_black_bold {
+  color: black !important;
+  font-weight: bold;
+}
+
+.sd_text_blue_bold {
+  color: #0066cc !important;
+  font-weight: bold;
+}
+
+.sd_info_common_barcode {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  float: right;
+  margin-top: -15px;
+}
+
+.sd_info_common_barcode img {
+  width: 200px;
+}
+.sd_info_common_barcode label {
+  font-size: 12px;
+  margin-top: -5px;
+}
+
+.sd_mr_25 {
+  margin-right: 25px;
+}
+
+.sd_count_down_item {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+}
+
+.sd_text_center {
+  color: white;
+  text-align: center;
+  font-size: 12px;
+  margin-top: 2px;
+}
+
+.sd_watch_seri9,
+.watch_se,
+.watch_ultra_2 {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  .sd_watch_seri9,
+  .watch_se,
+  .watch_ultra_2 {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+  .watch_ultra_2 .content-attrubite .attributes > div {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .watch_ultra_2 .image-wrapper img,
+  .watch_se .image-wrapper img,
+  .sd_watch_seri9 .image-wrapper img {
+    width: 100%;
+  }
+}
+
+.price-strike {
+  text-decoration: line-through;
+}
+
+.sd_ml_5 {
+  margin-left: 5px;
+}
+
+@media only screen and (max-width: 600px) {
+  .product-picture {
+    margin-left: 0!important;
+    margin-right: 0!important;
+  }
+  .product-picture img {
+    max-width: 72px!important;
+  }
+  .attributes .price-strike {
+    /* font-size: 10px; */
+  }
+  .products {
+    margin-left: -10px;
+  }
+}

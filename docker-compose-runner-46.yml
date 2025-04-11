@@ -1,0 +1,8 @@
+version: "3.4"
+
+services:
+  minigame_web_3004:
+    image: minigame_web_dev_img
+    container_name: minigame_web
+    ports:
+      - "192.168.1.103:3013:80"

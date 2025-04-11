@@ -1,0 +1,197 @@
+/* GiftBox */
+.bw_giftBox {
+  width: 120px;
+  height: 0px;
+  position: relative;
+  margin: 0px auto 150px auto;
+  cursor: pointer;
+}
+
+.bw_bodyBox {
+  width: 95%;
+  margin: 0 auto;
+  height: 155px;
+  background: url("../assets/bw_image/hop.svg") no-repeat center bottom;
+  background-size: contain;
+  padding-top: 38px;
+}
+
+.bw_lidBox {
+  width: 100%;
+  height: 142px;
+  background: url("../assets/bw_image/nap.svg") no-repeat center;
+  background-size: contain;
+  position: absolute;
+  top: 0;
+  z-index: 3;
+  left: 0;
+}
+
+@keyframes identifier {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  25% {
+    transform: rotate(10deg);
+  }
+
+  50% {
+    transform: rotate(0deg);
+  }
+
+  75% {
+    transform: rotate(-10deg);
+  }
+
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+.bw_giftBox:hover .bw_lidBox {
+  animation-name: identifier;
+  animation-duration: 200ms;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: 3;
+  transition: all 500ms;
+}
+
+.bw_giftBox:hover .bw_bodyBox {
+  animation-name: identifier;
+  animation-duration: 200ms;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: 2;
+}
+
+.bw_giftInsite {
+  position: absolute;
+  width: 120%;
+  height: auto;
+  left: -10px;
+  z-index: 2;
+  transform: scale(0);
+  opacity: 0;
+  top: 20px;
+  transition: all 600ms;
+}
+
+.bw_giftBox.bw_giftOpen .bw_lidBox {
+  transform: rotate(40deg);
+  left: 50%;
+}
+
+.bw_giftBox.bw_giftOpen .bw_giftInsite {
+  transform: scale(1);
+  opacity: 1;
+  top: 50;
+  animation-name: identifier;
+  animation-duration: 200ms;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: 2;
+  animation-delay: 600ms;
+}
+
+.bw_giftInsite img {
+  width: 100%;
+}
+
+.genBox {
+  width: auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  column-gap: 25px;
+}
+
+/* Modal present  */
+.title-popup-event {
+  margin-top: 20px;
+}
+
+/* Modal game */
+.title-popup-event img {
+  height: 175px;
+}
+
+.charge {
+  margin-top: "40px";
+  height: "300px";
+}
+
+@media only screen and (max-width: 430px) {
+  .bw_giftBox {
+    width: 48px;
+  }
+
+  .bw_bodyBox {
+    height: 50px;
+  }
+
+  .bw_lidBox {
+    height: 30px;
+  }
+
+  .bw_giftBox__rp {
+    height: 0px;
+    margin-bottom: 80px;
+  }
+
+  .charge-rp {
+    height: 72px;
+    margin-top: unset;
+  }
+}
+
+@media only screen and (max-width: 640px) {
+  .attributes > div {
+    display: block !important;
+  }
+
+  .section-product {
+    margin: 0 30px;
+  }
+
+  .watch_ultra_2 .stogre .option-list {
+    flex-direction: column;
+    align-items: center!important;
+  }
+  .watch_ultra_2 .stogre .option-list li label {
+    width: 140px!important;
+    min-width: 140px!important;
+  }
+
+  .airpods-text-follow {
+    width: 80%;
+    margin: 0 auto!important;
+    line-height: 1.5!important;
+  }
+}
+
+.section-product {
+  display: flex;
+  column-gap: 15px;
+  justify-content: center;
+}
+
+.airpods-text-follow {
+  margin-top: 0!important;
+  padding-top: 0!important;
+}
+
+
+.commingsoon-page .hero-bgimage .btn_deposit {
+  height: 50px;
+  top: -60px;
+  background: #fff;
+  color: #000;
+  font-weight: 500;
+  border: 2px solid #7D4830;
+  right: 10px;
+}
+
+@media screen and (max-width: 992px) {
+  .commingsoon-page .hero-bgimage .btn_deposit {
+    height: 40px;
+  }
+}
